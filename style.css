@@ -1,0 +1,64 @@
+body {
+  background: #333;
+  font-family: "Courier New", Courier, monospace;
+}
+.clock {
+  font-size: 4em;
+  text-align: center;
+  margin: 200px auto;
+  color: yellow;
+}
+.clock span {
+  min-width: 100px;
+  background: #444;
+  padding: 20px;
+  display: inline-block;
+  position: relative;
+  box-shadow: 0 7px 4px rgba(0, 0, 0, 0.3);
+}
+.clock span:after {
+  content: ":";
+  position: absolute;
+  right: -38px;
+}
+.clock span:nth-child(3):after {
+  content: "";
+}
+
+@media only screen and (max-width: 514px) {
+  .clock {
+    font-size: 1.6em;
+    text-align: center;
+    margin: 200px auto;
+    color: yellow;
+  }
+  .clock span:after {
+    content: ":";
+    position: absolute;
+    right: -15px;
+  }
+  .clock span:nth-child(3):after {
+    content: "";
+  }
+  .clock span {
+    min-width: 50px;
+    display: inline-block;
+  }
+}
+
+@media only screen and (max-width: 319px) {
+  .clock {
+    font-size: 2em;
+    text-align: center;
+    margin: 200px auto;
+    color: yellow;
+  }
+  .clock span {
+    min-width: 50px;
+    display: block;
+    margin-bottom: 10px;
+  }
+  .clock span:after {
+    content: "";
+  }
+}
